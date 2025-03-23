@@ -22,10 +22,8 @@ To tackle this, they turned to their data analytics team, seeking clear, actiona
 
 # ANALYSIS:
 
-1.MARKET SHARE OF EACH COMPANY
 
-
-### Market Share of Each Company
+### 1.Market Share of Each Company
 
 **SQL QUERY**
 ```sql
@@ -34,6 +32,18 @@ SELECT o.company,
        ROUND((SUM(o.units_sold) / (SELECT SUM(units_sold) FROM orders)) * 100, 2) AS market_share
 FROM orders o
 GROUP BY o.company;
+
+```
+
+
+Output:
+
+![Market Share Of Each Company](https://miro.medium.com/v2/resize:fit:498/format:webp/1*GKQRYyIxEpdDr3s993S0tA.png)
+
+Visualization :
+
+![Market Share Of Each Company](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*nUUB9JzqBMEEK4hTVgNKyw.png)
+
 
 
 
