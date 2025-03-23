@@ -45,6 +45,29 @@ Visualization :
 ![Market Share Of Each Company](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*nUUB9JzqBMEEK4hTVgNKyw.png)
 
 
+### 2.CUSTOMER COUNT OF EACH COMPANY
+
+**SQL QUERY**
+
+```sql 
+
+select  o.company,count(customer_name) as cust_no 
+from 
+orders o 
+group by 1
+order by 1 desc;
+
+```
+
+Output : 
+
+![Customer_Count_Of_Each_Company](https://miro.medium.com/v2/resize:fit:460/format:webp/1*kYFDhY0tAp0wqi8JqZ1RoA.png)
+
+Visualization :
+              
+![Customer_Count_of_Each_Company](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*MoelDR6cAONdl_bqPVGpsw.png)
+
+
 
 
 
