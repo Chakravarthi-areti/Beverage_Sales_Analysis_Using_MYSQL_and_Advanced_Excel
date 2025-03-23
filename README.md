@@ -1,1 +1,13 @@
-# Beverage_Sales_Analysis_Using_MYSQL_-_Advanced_Excel
+# BEVERAGE SALES ANALYSIS USING MYSQL AND EXCEL
+
+![Beverage Sales Analysis](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*WNTneKaklgnIOh3G7w8c7w.png)
+
+
+# PROBLEM STATEMENT
+
+Some Beverage companies, leading distributor of consumer products, was facing a pressing issue — inconsistent sales performance across different regions. 
+While some areas thrived, others lagged behind, causing a disconnect between budgeted and actual sales. Profit margins fluctuated, and managers struggled to pinpoint the root causes behind the underperformance.
+
+Company executives grew concerned. Were certain products not performing well? Were sales managers assigned inefficiently? Was regional demand being misjudged? Without concrete data-driven insights, decision-making felt like a guessing game.
+
+To tackle this, they turned to their data analytics team, seeking clear, actionable insights that could help them identify trends, optimize sales strategies, and boost profitability across all regions. The challenge was set — could data unlock the secrets behind their sales struggles?
