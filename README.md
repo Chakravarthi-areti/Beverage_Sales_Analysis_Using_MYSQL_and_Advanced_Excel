@@ -243,6 +243,12 @@ Visualization :
 
 3.Giving any special offers to the low foot fall regions to increase the sales
 
+## Tools Used
+
+- MySQL for data extraction, transformation, and querying
+- Excel for data visualization and trend analysis
+
+
 
 
 
