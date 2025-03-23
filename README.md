@@ -91,7 +91,7 @@ Visualization :
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ABFgmp8zUs9p-gsJvc46IQ.png)
 
 
-## 4. 4.MONTH WISE PROFIT PERCENTAGE
+## 4.MONTH WISE PROFIT PERCENTAGE
 
 **SQL QUERY** 
 
@@ -113,6 +113,137 @@ Output :
 
 Visualization :
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*oh3FU1GtQgjpRue_6Vh4qA.png)
+
+
+## 5.REGIONS WITH LOW SALES UNITS
+
+**SQL QUERY** 
+
+```sql 
+
+select * from (
+select o.company ,o.customer_city,sum(units_sold) as units
+from regions r 
+inner join 
+orders o 
+on 
+r.state = o.customer_state
+group by 1,2
+order by units desc)b 
+where units < 101;
+
+```
+
+Output :
+
+![Regions_With_Low_Sales](https://miro.medium.com/v2/resize:fit:640/format:webp/1*Iuc-6WyOo_bNIGzWbXPauQ.png)
+
+
+## 6.STATE PERFORMANCE WITH RESPECT PROFIT %
+
+**SQL QUERY**
+
+```sql 
+
+SELECT 
+    o.customer_state,
+    SUM(o.sales) AS total_sales,
+    SUM(o.profit) AS total_profit,
+    (SUM(o.profit) / SUM(o.sales)) * 100 AS profit_margin_percentage
+FROM orders o
+GROUP BY 1
+ORDER BY profit_margin_percentage DESC;
+
+```
+
+Output :
+
+![](https://miro.medium.com/v2/resize:fit:640/format:webp/1*611-QpAYbD_GavVIYBfUFA.png)
+
+Visualization :
+
+![](https://miro.medium.com/v2/resize:fit:4642/format:webp/1*vgW5v2YcGO84RKBh7589rA.png)
+
+
+## 7.REGIONS WHERE SALES > ACTUAL SALES
+
+**SQL QUERY**
+
+```sql 
+
+SELECT r.region, 
+       SUM(o.budget_sales) AS planned_sales,
+       SUM(o.sales) AS actual_sales
+FROM orders o
+JOIN regions r ON o.customer_state = r.state
+GROUP BY r.region
+HAVING actual_sales >planned_sales
+ORDER BY actual_sales DESC;
+
+``` 
+
+Output :
+
+![](https://miro.medium.com/v2/resize:fit:640/format:webp/1*vksUWLcaNOPBGpucPfMEHA.png)
+
+Visualization :
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*o3V4wPdbSfXlPSJQM6ymaw.png)
+
+
+## Profit percentage With Respect to the Category
+
+**SQL QUERY**
+
+```sql 
+
+SELECT 
+    o.category,
+    (SUM(profit) / (SELECT SUM(sales) FROM orders)) * 100 AS total_profit_percentage
+FROM orders o
+GROUP BY o.category
+ORDER BY total_profit_percentage DESC;
+
+```
+
+Output :
+![](https://miro.medium.com/v2/resize:fit:544/format:webp/1*qbrEkXnz8ebMJWRbsxrC4Q.png)
+
+Visualization :
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*qF9nIAAJAbJpF1-eGGNwQw.png)
+
+
+
+# OBSERVATIONS
+
+1.All Companies are having the equal and tough competition in the market , each of them are trying their best to improve their sales
+
+2.Customers are slightly interested to buy coca-coala than pepsi and dr.pepper
+
+3.December is the Most highly saled month then following by March- September as there is a constant sales
+
+4. December ,February ,March is the Most Profitable Months because of the summer month in the American State
+
+5.There are cities like Halfmoon-bay,Tamaqua where sales are only 100 units ,West virginia,North_dakot,South_Dakota showing negative profits
+
+6.Sallisaw,Tamaqua,Cotulla,Berne and some other cities are showing only 100 units sales which is the least
+
+7.Sates like West Virginia,South Dakota,North Dakota are showing negative profits in the sales
+
+8.South east, NorthEast,West,South West are the regions where Sales are greater than planned sales
+
+9.Soft drinks,Alcohol are most profitable Categories and coffee is the least profitable
+
+
+# SUGGESTIONS
+
+1.Should concentrate on the Low units saled regions and promote them with high reaching promotions
+
+2.Collaborating with any other food brands so that they can send it along with the food so that customer will come
+
+3.Giving any special offers to the low foot fall regions to increase the sales
+
+
 
 
 
