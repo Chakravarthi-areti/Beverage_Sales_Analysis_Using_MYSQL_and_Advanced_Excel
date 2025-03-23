@@ -68,6 +68,28 @@ Visualization :
 ![Customer_Count_of_Each_Company](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*MoelDR6cAONdl_bqPVGpsw.png)
 
 
+## 3. MONTH WISE SALES TRENDS
+
+**SQL QUERY**
+
+```sql 
+
+SELECT DATE_FORMAT(STR_TO_DATE(purchase_date, '%Y-%m-%d'), '%M') AS month,
+       company, 
+       SUM(units_sold) AS sales 
+FROM orders 
+GROUP BY month, company;
+
+```
+
+Output :
+
+![Month_Wise_Sales_Trends](https://miro.medium.com/v2/resize:fit:566/format:webp/1*dq0zwBa6fyvEDjR9fKD4Ow.png)
+
+Visualization :
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ABFgmp8zUs9p-gsJvc46IQ.png)
+
 
 
 
