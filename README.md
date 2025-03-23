@@ -91,6 +91,30 @@ Visualization :
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ABFgmp8zUs9p-gsJvc46IQ.png)
 
 
+## 4. 4.MONTH WISE PROFIT PERCENTAGE
+
+**SQL QUERY** 
+
+```sql
+
+SELECT 
+    DATE_FORMAT(STR_TO_DATE(purchase_date, '%Y-%m-%d'), '%M') AS months, 
+    company, 
+    (SUM(profit) / NULLIF(SUM(sales), 0)) * 100 AS profit_percentage
+FROM orders 
+GROUP BY months, company
+order by company desc;
+
+```
+
+Output :
+
+![MOnth_Wise_Profit](https://miro.medium.com/v2/resize:fit:640/format:webp/1*yVnIv0FY3IGsxvlTNr6Ovg.png)
+
+Visualization :
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*oh3FU1GtQgjpRue_6Vh4qA.png)
+
+
 
 
 
