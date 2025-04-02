@@ -250,7 +250,8 @@ Visualization :
 
 ## Click the image for Project Presentation
 
-[![Click the image for Project Presentation](https://miro.medium.com/v2/resize:fit:400/format:webp/1*WNTneKaklgnIOh3G7w8c7w.png)](https://www.linkedin.com/feed/update/urn:li:activity:7307604739771224067/)
+[![Click the image for Project Presentation](![image](https://github.com/user-attachments/assets/3a624d9c-22e1-47a3-b431-3ac0d7541cd4)
+)](https://www.linkedin.com/feed/update/urn:li:activity:7307604739771224067/)
 
 
 
