@@ -248,9 +248,9 @@ Visualization :
 - MySQL for data extraction, transformation, and querying
 - Excel for data visualization and trend analysis
 
-## Project Presentatio
+## Click the image for Project Presentation
 
-[![Click the image for Project Presentation](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*WNTneKaklgnIOh3G7w8c7w.png)](https://www.linkedin.com/feed/update/urn:li:activity:7307604739771224067/)
+[![Click the image for Project Presentation](https://miro.medium.com/v2/resize:fit:400/format:webp/1*WNTneKaklgnIOh3G7w8c7w.png)](https://www.linkedin.com/feed/update/urn:li:activity:7307604739771224067/)
 
 
 
